@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>70 жас мерейтойы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="invitation">
+
+        <!-- Басты бет (Бастапқыда тек осы бөлім көрінеді) -->
+        <section class="hero">
+            <p class="small-title">МЕРЕЙТОЙҒА ШАҚЫРТУ</p>
+
+            <h1>70 жас</h1>
+
+            <div class="line"></div>
+
+            <h2 id="guestName">Құрметті қонақ!</h2>
+
+            <p class="intro">
+                Сізді аяулы анамыздың
+                70 жас мерейтойына арналған
+                ақ дастарханымыздың қадірлі қонағы
+                болуға шақырамыз!
+            </p>
+
+            <!-- Батырма басылғанда toggleInvitation() функциясы шақырылады -->
+            <button id="openBtn" onclick="toggleInvitation()">
+                Шақыртуды ашу
+            </button>
+        </section>
+
+        <!-- Негізгі ақпарат бөлімі (Бастапқыда жасырулы тұрады) -->
+        <div id="invitationContent" class="hidden-content">
+
+            <section class="photo-section">
+                <h2>Аяулы анамызға — 70 жас ❤️</h2>
+                <p>
+                    70 жыл — өмірдің өнегелі белесі, 
+                    жүректің даналыққа толған шағы.
+                </p>
+            </section>
+
+            <section id="event" class="event">
+                <h2>Той салтанаты</h2>
+
+                <div class="info">
+                    <p>📅 <b>Күні</b></p>
+                    <p>12.12.2026 жыл</p>
+
+                    <p>🕐 <b>Уақыты</b></p>
+                    <p>12:12</p>
+
+                    <p>📍 <b>Өтетін орны</b></p>
+                    <p>«Sultan Saraiyi» мейрамханасы</p>
+
+                    <p>📌 <b>Мекенжайы</b></p>
+                    <p>
+                        Зашаған кенті, Брусиловский көшесі, 4<br>
+                        <a href="https://2gis.kz/uralsk/geo/70000001072745037/51.294124,51.169976" target="_blank" rel="noopener">2GIS арқылы картадан қарау 📍</a>
+                    </p>
+                </div>
+            </section>
+
+            <section class="rsvp">
+                <h2>Сізді күтеміз! ❤️</h2>
+                <p>Тойымызға қатысатыныңызды растауыңызды сұраймыз.</p>
+
+                <button onclick="sendRSVP('Иә, қатысамын')">
+                    ❤️ Қатысамын
+                </button>
+
+                <button onclick="sendRSVP('Өкінішке қарай, қатыса алмаймын')">
+                    Қатыса алмаймын
+                </button>
+
+                <p id="response"></p>
+            </section>
+
+            <footer>
+                <p>Ізгі ниетпен, мерейтой иесінің балалары ❤️</p>
+            </footer>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

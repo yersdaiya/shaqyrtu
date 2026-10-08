@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: #f7f0e7;
+    color: #5b1727;
+}
+
+.invitation {
+    max-width: 600px;
+    margin: auto;
+    background: #fffaf4;
+    text-align: center;
+}
+
+section {
+    padding: 70px 25px;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.small-title {
+    letter-spacing: 4px;
+    font-size: 13px;
+}
+
+h1 {
+    font-size: 90px;
+    margin: 20px 0;
+}
+
+h2 {
+    font-weight: normal;
+}
+
+.line {
+    width: 80px;
+    height: 1px;
+    background: #a88955;
+    margin: 20px;
+}
+
+.intro {
+    max-width: 450px;
+    line-height: 1.8;
+}
+
+button {
+    border: none;
+    background: #6d1f32;
+    color: white;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+
+.info {
+    line-height: 1.8;
+}
+
+
+.rsvp {
+    background: #f1e5d8;
+}
+
+#response {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Бастапқыда жасырып қою */
+.hidden-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+/* Батырма басылғанда ашылу класы */
+.hidden-content.show {
+    display: block;
+    opacity: 1;
+}
