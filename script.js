@@ -60,14 +60,30 @@ document.addEventListener("DOMContentLoaded", function() {
     startTimer();
 });
 
-// 3. RSVP (Жауап беру батырмалары)
-function sendRSVP(status) {
-    var responseElem = document.getElementById("response");
-    if (status === 'Қатысамын') {
-        alert("Қатысатыныңызға қуаныштымыз! Күтеміз! ❤️");
-        if(responseElem) responseElem.innerText = "Сіз қатысуыңызды растадыңыз! ✨";
-    } else {
-        alert("Хабарласқаныңызға рахмет!");
-        if(responseElem) responseElem.innerText = "Жауабыңыз қабылданды.";
-    }
-}
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz5SurUoEj9QslY-keRNecI5XvOxNvZbxNHYeIJd5IQ64tkajBthFd0M0j5cIIZXVmpsA/exec";
+
+document.getElementById('rsvpForm')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const submitBtn = document.getElementById('submitBtn');
+    const statusMsg = document.getElementById('formStatus');
+    const formData = new FormData(this);
+    
+    submitBtn.disabled = true;
+    submitBtn.innerText = "Жіберілуде...";
+    
+    fetch(SCRIPT_URL, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        statusMsg.innerText = "Жауабыңыз қабылданды! Рахмет! ❤️";
+        submitBtn.innerText = "Жіберілді ✨";
+        this.reset();
+    })
+    .catch(error => {
+        statusMsg.innerText = "Қате кетті, қайтадан байқап көрсеңіз.";
+        submitBtn.disabled = false;
+        submitBtn.innerText = "Жіберу ✉️";
+    });
+});

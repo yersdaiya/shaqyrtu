@@ -129,18 +129,41 @@
            <!-- Hosts Section & RSVP -->
             <!-- Hosts Section & RSVP -->
 <!-- Hosts Section & RSVP -->
+<!-- Hosts Section & RSVP -->
 <section class="section-card animate-on-scroll">
     <h2 class="hosts-title">Той иелері:</h2>
     <h3 class="hosts-names">Мерейтой иесінің балалары</h3>
     <p class="sub-italic">Сіздерді тойымызда күтеміз!</p>
 
     <div class="rsvp-block">
-        <h2 class="script-title" style="margin-top: 15px;">Анкета</h2>
-        
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScyYMXlz2UNpIlJm0049TevBmlUdnzWg4RTje30fW_cVnEYMg/viewform?embedded=true" class="google-form-iframe" frameborder="0" marginheight="0" marginwidth="0">Жүктелуде…</iframe>
+        <h2 class="script-title" style="margin-top: 20px;">Анкета</h2>
+
+        <form id="rsvpForm" class="custom-rsvp-form">
+            <div class="form-group">
+                <label for="guest_name">Аты-жөніңіз:</label>
+                <input type="text" id="guest_name" name="name" placeholder="Атыңызды жазыңыз" required>
+            </div>
+
+            <div class="form-group">
+                <label>Тойға қатысасыз ба?</label>
+                <div class="radio-options">
+                    <label class="radio-label">
+                        <input type="radio" name="attendance" value="Иә, келемін ✨" checked>
+                        <span>Иә, келемін</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="attendance" value="Өкінішке орай, келе алмаймын 😔">
+                        <span>Өкінішке орай, келе алмаймын</span>
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" id="submitBtn" class="btn-submit">Жіберу ✉️</button>
+        </form>
+
+        <p id="formStatus" class="form-status-msg"></p>
     </div>
 </section>
-
             <footer>
                 <p>© 2026 Анамыздың 70 жас мерейтойы</p>
             </footer>
