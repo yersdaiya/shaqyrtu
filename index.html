@@ -2,90 +2,150 @@
 <html lang="kk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>70 жас мерейтойы</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="Мерейтой — 70 жас">
+    <meta property="og:description" content="12 желтоқсан 2026 · Сіздерді анамыздың мерейтойына шақырамыз!">
+    <meta property="og:type" content="website">
+
+    <title>Мерейтой — 70 жас · 12.12.2026</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts: Cormorant Garamond, Great Vibes, Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <main class="invitation">
+    <!-- Фоновая музыка -->
+    <audio id="bgMusic" loop src="music.mp3"></audio>
 
-        <!-- Басты бет (Бастапқыда тек осы бөлім көрінеді) -->
-        <section class="hero">
-            <p class="small-title">МЕРЕЙТОЙҒА ШАҚЫРТУ</p>
+    <main class="invitation-wrapper">
 
-            <h1>70 жас</h1>
+      <!-- Hero Section (Бірінші сүрет стилінде) -->
+<section class="hero fade-in">
+    <div class="hero-content">
+        <p class="subtitle">МЕРЕЙТОЙҒА ШАҚЫРУ</p>
 
-            <div class="line"></div>
+        <div class="age-badge">
+            <span class="age-num">70</span>
+            <span class="age-text">жас</span>
+        </div>
 
-            <h2 id="guestName">Құрметті қонақ!</h2>
+        <h1 class="main-title-script">Аяулы анамыз</h1>
+        <p class="gran-name">Рауза</p>
 
-            <p class="intro">
-                Сізді аяулы анамыздың
-                70 жас мерейтойына арналған
-                ақ дастарханымыздың қадірлі қонағы
-                болуға шақырамыз!
-            </p>
+        <button id="openBtn" class="pulse-btn" onclick="toggleInvitation()">
+            Шақыртуды ашу 💌
+        </button>
+    </div>
+</section>
 
-            <!-- Батырма басылғанда toggleInvitation() функциясы шақырылады -->
-            <button id="openBtn" onclick="toggleInvitation()">
-                Шақыртуды ашу
-            </button>
-        </section>
+        <!-- Контейнер с основным контентом (Бастапқыда жасырулы) -->
+        <div id="mainContent" class="hidden-content">
 
-        <!-- Негізгі ақпарат бөлімі (Бастапқыда жасырулы тұрады) -->
-        <div id="invitationContent" class="hidden-content">
+            <!-- Main Invitation Card -->
+<section class="section-card animate-on-scroll">
+    <h2 class="script-title">Құрметті</h2>
+    
+    <p class="guest-list">
+        Ағайын-туыс, құда-жегжат, бауырлар,<br>
+        нағашы-жиен, бөлелер, дос-жаран, көршілер<br>
+        мен әріптестер!
+    </p>
+    
+    <div class="gold-accent-block">
+        <span class="small-sub">СІЗДЕРДІ</span>
+        <h3 class="highlight-title-script">Ардақты Анамыздың</h3>
+    </div>
+    
+    <p class="invitation-text">
+        70 жас мерейтойына арналған салтанатты ақ<br>
+        дастарханымыздың қадірлі қонағы болуға<br>
+        шақырамыз!
+    </p>
+</section>
 
-            <section class="photo-section">
-                <h2>Аяулы анамызға — 70 жас ❤️</h2>
-                <p>
-                    70 жыл — өмірдің өнегелі белесі, 
-                    жүректің даналыққа толған шағы.
-                </p>
-            </section>
+            <!-- Date & Calendar Section -->
+            <section class="section-card animate-on-scroll">
+                <h2 class="script-title">Мерейтой күні</h2>
+                <p class="mono-date">12 ЖЕЛТОҚСАН 2026</p>
 
-            <section id="event" class="event">
-                <h2>Той салтанаты</h2>
-
-                <div class="info">
-                    <p>📅 <b>Күні</b></p>
-                    <p>12.12.2026 жыл</p>
-
-                    <p>🕐 <b>Уақыты</b></p>
-                    <p>12:12</p>
-
-                    <p>📍 <b>Өтетін орны</b></p>
-                    <p>«Sultan Saraiyi» мейрамханасы</p>
-
-                    <p>📌 <b>Мекенжайы</b></p>
-                    <p>
-                        Зашаған кенті, Брусиловский көшесі, 4<br>
-                        <a href="https://2gis.kz/uralsk/geo/70000001072745037/51.294124,51.169976" target="_blank" rel="noopener">2GIS арқылы картадан қарау 📍</a>
-                    </p>
+                <div class="calendar-grid">
+                    <div class="day-head">дс</div><div class="day-head">сс</div><div class="day-head">ср</div>
+                    <div class="day-head">бс</div><div class="day-head">жм</div><div class="day-head">сн</div><div class="day-head">жс</div>
+                    
+                    <div></div>
+                    
+                    <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
+                    <div>7</div><div>8</div><div>9</div><div>10</div><div>11</div>
+                    <div class="selected-day"><span>12</span></div>
+                    <div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div>
+                    <div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div><div>26</div>
+                    <div>27</div><div>28</div><div>29</div><div>30</div><div>31</div>
                 </div>
             </section>
 
-            <section class="rsvp">
-                <h2>Сізді күтеміз! ❤️</h2>
-                <p>Тойымызға қатысатыныңызды растауыңызды сұраймыз.</p>
+            <!-- Location Section -->
+            <section class="section-card animate-on-scroll">
+                <h2 class="location-title">Мекен-жай</h2>
 
-                <button onclick="sendRSVP('Иә, қатысамын')">
-                    ❤️ Қатысамын
-                </button>
+                <div class="address-box">
+                    <p class="address-text">
+                        Орал қаласы, Зашаған кенті,<br>
+                        Брусиловский көшесі, 4
+                    </p>
+                    <h3 class="restaurant-name">«Sultan Saraiyi»<br>мейрамханасы</h3>
+                </div>
 
-                <button onclick="sendRSVP('Өкінішке қарай, қатыса алмаймын')">
-                    Қатыса алмаймын
-                </button>
+                <a href="https://2gis.kz/fast/uralsk/geo/70000001072745037/51.294124,51.169976" target="_blank" rel="noopener noreferrer" class="map-btn">
+                    <span>Картадан ашу</span>
+                </a>
+            </section>
 
-                <p id="response"></p>
+            <!-- Program Section -->
+            <section class="section-card animate-on-scroll">
+                <div class="program-item">
+                    <span class="time">12:12</span>
+                    <span class="event-desc">ТОЙДЫҢ БАСТАЛУЫ</span>
+                </div>
+            </section>
+
+            <!-- Countdown Timer -->
+            <section class="timer-card animate-on-scroll">
+                <p class="mono-sub">МЕРЕЙТОЙҒА ДЕЙІН</p>
+                <div id="countdown" class="countdown">
+                    <div class="time-box"><span id="days">00</span><p>күн</p></div>
+                    <div class="time-box"><span id="hours">00</span><p>сағат</p></div>
+                    <div class="time-box"><span id="minutes">00</span><p>минут</p></div>
+                    <div class="time-box"><span id="seconds">00</span><p>секунд</p></div>
+                </div>
+            </section>
+
+            <!-- Hosts Section & RSVP -->
+            <section class="section-card animate-on-scroll">
+                <h2 class="hosts-title">Той иелері:</h2>
+                <h3 class="hosts-names">Мерейтой иесінің отбасы</h3>
+                <p class="sub-italic">Сіздерді тойымызда күтеміз!</p>
+
+                <div class="rsvp-block">
+                    <p class="rsvp-prompt">Тойға қатысатыныңызды растауыңызды сұраймыз:</p>
+                    <div class="rsvp-buttons">
+                        <button class="btn-yes" onclick="sendRSVP('Қатысамын')">❤️ Қатысамын</button>
+                        <button class="btn-no" onclick="sendRSVP('Қатыса алмаймын')">Қатыса алмаймын</button>
+                    </div>
+                    <p id="response"></p>
+                </div>
             </section>
 
             <footer>
-                <p>Ізгі ниетпен, мерейтой иесінің балалары ❤️</p>
+                <p>© 2026 Анамыздың 70 жас мерейтойы</p>
             </footer>
 
-        </div>
+        </div> <!-- /#mainContent -->
 
     </main>
 
